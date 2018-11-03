@@ -7,11 +7,12 @@ Use this container to fetch the composer and npm dependencies of an app you are 
 * Node 9.3.0 (npm v5.5.1)
 * Yarn 1.12.1
 * PHP CLI 7.1
-* Composer
+* Composer 1.6.3
 * Python 2.7
-* Bower
-* Gulp
-* MySQL Client
+* Bower 1.8.4
+* Gulp 3.9.1
+* MySQL Client 14.14
+* Git 2.7.4
 
 
 ## Usage

@@ -213,6 +213,10 @@ RUN apt install python2.7 python-pip -y
 RUN apt-get install mysql-client -y
 
 
+# install wget
+RUN apt-get update
+RUN apt install wget -y
+
 ###########################################################################
 # Check PHP version:
 ###########################################################################
