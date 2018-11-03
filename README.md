@@ -10,7 +10,7 @@ useful for:
 
 Demo
 
-![alt text](https://raw.githubusercontent.com/buonzz/cli-workspace/branch/demo.mp4)
+![alt text](https://raw.githubusercontent.com/buonzz/cli-workspace/master/demo.gif)
 
 
 ## Softwares Installed
