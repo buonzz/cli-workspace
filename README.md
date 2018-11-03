@@ -8,6 +8,10 @@ useful for:
 * quickly install all the tools you need by executing a single command (all you need is to have the docker engine installed)
 * fetch the dependencies of an app you are working on. 
 
+Demo
+
+![alt text](https://raw.githubusercontent.com/buonzz/cli-workspace/branch/demo.mp4)
+
 
 ## Softwares Installed
 
