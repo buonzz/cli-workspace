@@ -1,4 +1,4 @@
-FROM laradock/workspace:2.2-7.1
+FROM laradock/workspace:2.2-7.2
 
 # Start as root
 USER root
