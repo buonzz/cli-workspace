@@ -210,7 +210,7 @@ RUN if [ ${INSTALL_YARN} = true ]; then \
 ;fi
 
 # install python
-RUN apt install python2.7 python-pip
+RUN apt install python2.7 python-pip -y
 
 ###########################################################################
 # Check PHP version:
