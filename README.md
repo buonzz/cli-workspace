@@ -1,6 +1,13 @@
-# Docker Workspace
+# Docker CLI Workspace
 
-Use this container to fetch the composer and npm dependencies of an app you are working on. It also have common clients installed such as mysql, redis etc. So that you can inspect the stack or whatever other containers that you need to access.
+You can use this container to use commonly used cli tools without installing them in your machine
+
+useful for:
+
+* ensuring a consistent workflow across all team that is using different OS (Mac, Linux, Windows etc)
+* quickly install all the tools you need by executing a single command (all you need is to have the docker engine installed)
+* fetch the dependencies of an app you are working on. 
+
 
 ## Softwares Installed
 
@@ -50,3 +57,8 @@ just hit
 ```
 ./build.sh
 ```
+
+
+### Credits
+
+this project is an evolution of the https://github.com/laradock/workspace from Laradock.
