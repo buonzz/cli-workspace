@@ -209,11 +209,15 @@ RUN if [ ${INSTALL_YARN} = true ]; then \
 # install python
 RUN apt install python2.7 python-pip -y
 
+# install mysql client
+RUN apt-get install mysql-client -y
+
+
 ###########################################################################
 # Check PHP version:
 ###########################################################################
 
-ARG PHP_VERSION=7.1
+ARG PHP_VERSION=7.2
 
 RUN php -v | head -n 1 | grep -q "PHP ${PHP_VERSION}."
 

@@ -32,7 +32,7 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer install --no-in
 this will run the workspace, and execute composer install command inside. The resulting vendor folder is generated in the current folder.
 
 
-## accessing private repos
+### accessing private repos
 
 if you need to have a private repo accessed from within the container, generate ssh keys first, and then place them as in this repo as:
 
@@ -40,3 +40,12 @@ if you need to have a private repo accessed from within the container, generate 
 * insecure_id_rsa.pub
 
 then rebuild the container. The keys will be copied over to the image and will be used every time a container is created.
+
+
+### Rebuilding the image
+
+just hit
+
+```
+./build.sh
+```
