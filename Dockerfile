@@ -209,8 +209,8 @@ RUN if [ ${INSTALL_YARN} = true ]; then \
     echo 'export PATH="$YARN_DIR/bin:$PATH"' >> ~/.bashrc \
 ;fi
 
-
-
+# install python
+RUN apt install python2.7 python-pip
 
 ###########################################################################
 # Check PHP version:
