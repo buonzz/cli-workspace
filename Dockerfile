@@ -144,10 +144,13 @@ RUN if [ ${INSTALL_NODE} = true ]; then \
         && if [ ${NPM_REGISTRY} ]; then \
         npm config set registry ${NPM_REGISTRY} \
         ;fi \
-        npm install -g gulp \
-        npm install -g bower \
-        npm install -g @vue/cli
+        && npm install -g gulp \
+        && npm install -g bower \
+        && if [ ${INSTALL_NPM_VUE_CLI} = true ]; then \
+        npm install -g @vue/cli \
+        ;fi \
 ;fi
+
 
 # Wouldn't execute when added to the RUN statement in the above block
 # Source NVM when loading bash since ~/.profile isn't loaded on non-login shell
@@ -205,8 +208,6 @@ RUN if [ ${INSTALL_YARN} = true ]; then \
 
 # install python
 RUN apt install python2.7 python-pip -y
-
-RUN npm install -g bower && npm install --global gulp-cli
 
 ###########################################################################
 # Check PHP version:
