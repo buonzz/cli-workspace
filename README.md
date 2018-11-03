@@ -2,6 +2,18 @@
 
 Use this container to fetch the composer and npm dependencies of an app you are working on. It also have common clients installed such as mysql, redis etc. So that you can inspect the stack or whatever other containers that you need to access.
 
+## Softwares Installed
+
+* Node 9.3.0 (npm v5.5.1)
+* Yarn 1.12.1
+* PHP CLI 7.1
+* Composer
+* Python 2.7
+* Bower
+* Gulp
+
+
+
 ## Usage
 
 pull and run the container
