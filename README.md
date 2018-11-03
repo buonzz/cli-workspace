@@ -11,7 +11,7 @@ Use this container to fetch the composer and npm dependencies of an app you are 
 * Python 2.7
 * Bower
 * Gulp
-
+* MySQL Client
 
 
 ## Usage
