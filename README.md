@@ -89,12 +89,12 @@ docker run -v $(pwd):/var/www --user=laradock buonzz/workspace bash --login -c "
 docker run -v $(pwd):/var/www buonzz/workspace bash  -c "python -c \"for r in range(10): print 'hello'\""
 ```
 
-**run bower**
+**Bower**
 ```
 docker run -v $(pwd):/var/www buonzz/workspace bash  -c "bower --version"
 ```
 
-**run gulp**
+**Gulp**
 ```
 docker run -v $(pwd):/var/www buonzz/workspace bash  -c "gulp --version"
 ```
@@ -105,7 +105,7 @@ docker run -v $(pwd):/var/www buonzz/workspace bash  -c "mysql -u root -psecret 
 ```
 this will connect to the put_hostname_here mysql server, execute the sql query and dump the result to the current directory in the host.
 
-**run Java**
+**Java**
 ```
 docker run -v $(pwd):/var/www buonzz/workspace bash -c "java -version"
 ```

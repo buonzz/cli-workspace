@@ -244,7 +244,7 @@ RUN cd ~ && git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-RUN source ~/.bashrc
+RUN . ~/.bashrc
 RUN rbenv install 2.5.0
 RUN rbenv global 2.5.0
 
