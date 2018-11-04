@@ -1,4 +1,7 @@
-FROM laradock/workspace:2.2-7.2
+ARG PHP_VERSION=7.2
+FROM laradock/workspace:2.2-${PHP_VERSION}
+
+LABEL maintainer="Darwin Biler <buonzz@gmail.com>"
 
 # Start as root
 USER root
@@ -217,13 +220,6 @@ RUN apt-get install mysql-client -y
 RUN apt-get update
 RUN apt install wget -y
 
-###########################################################################
-# Check PHP version:
-###########################################################################
-
-ARG PHP_VERSION=7.2
-
-RUN php -v | head -n 1 | grep -q "PHP ${PHP_VERSION}."
 
 #
 #--------------------------------------------------------------------------
