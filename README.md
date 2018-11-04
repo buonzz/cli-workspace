@@ -78,6 +78,30 @@ in any folder on which you have package.json file, just execute the following:
 docker run -v $(pwd):/var/www --user=laradock buonzz/workspace bash --login -c "yarn install"
 ```
 
+**run python command**
+
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash  -c "python -c \"for r in range(10): print 'hello'\""
+```
+
+**run bower**
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash  -c "bower --version"
+```
+
+**run gulp**
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash  -c "gulp --version"
+```
+
+**run mysql commands**
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash  -c "mysql -u root -psecret -h put_hostname_here -e \"SELECT * FROM users\" > users.sql"
+```
+this will connect to the put_hostname_here mysql server, execute the sql query and dump the result to the current directory in the host.
+
+
+
 ### Accessing private repos
 
 if you need to have a private repo accessed from within the container, generate ssh keys first, and then place them as in this repo as:
