@@ -36,7 +36,10 @@ pull and run the container
 docker run -it buonzz/workspace /bin/bash
 ```
 
-### Use the container to Fetch composer dependencies
+### You can use the container to:
+
+
+1. Fetch composer dependencies
 
 in any folder on which you have composer.json file, just execute the following:
 
@@ -47,7 +50,17 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer install --no-in
 this will run the workspace, and execute composer install command inside. The resulting vendor folder is generated in the current folder.
 
 
-### accessing private repos
+2. Fetch npm packages
+
+in any folder on which you have package.json file, just execute the following:
+
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "npm install"
+```
+
+
+
+### Accessing private repos
 
 if you need to have a private repo accessed from within the container, generate ssh keys first, and then place them as in this repo as:
 
