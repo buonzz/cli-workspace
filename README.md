@@ -17,7 +17,7 @@ Demo
 
 * Node 9.3.0 (npm v5.5.1)
 * Yarn 1.12.1
-* PHP CLI 7.1 (with common, curl, intl, json, xml, mbstring, mysql, pgsql, sqlite, sqlite3, zip, bcmath, memcached, gd extensions)
+* PHP CLI 7.2 (with common, curl, intl, json, xml, mbstring, mysql, pgsql, sqlite, sqlite3, zip, bcmath, memcached, gd extensions)
 * Composer 1.6.3
 * Python 2.7
 * Bower 1.8.4
