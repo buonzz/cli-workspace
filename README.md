@@ -39,7 +39,7 @@ docker run -it buonzz/workspace /bin/bash
 ### You can use the container to:
 
 
-1. Fetch composer dependencies
+**Fetch composer dependencies**
 
 in any folder on which you have composer.json file, just execute the following:
 
@@ -49,8 +49,20 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer install --no-in
 
 this will run the workspace, and execute composer install command inside. The resulting vendor folder is generated in the current folder.
 
+**install or update a composer package**
 
-2. Fetch npm packages
+
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer update elasticsearch/elasticsearch"
+```
+or
+
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer update elasticsearch/elasticsearch"
+```
+
+
+**Fetch npm packages (using npm)**
 
 in any folder on which you have package.json file, just execute the following:
 
@@ -58,7 +70,13 @@ in any folder on which you have package.json file, just execute the following:
 docker run -v $(pwd):/var/www buonzz/workspace bash -c "npm install"
 ```
 
+**Fetch npm packages (using yarn)**
 
+in any folder on which you have package.json file, just execute the following:
+
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "yarn"
+```
 
 ### Accessing private repos
 
