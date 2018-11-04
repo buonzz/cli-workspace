@@ -27,6 +27,7 @@ Demo
 * Curl
 * vim
 * nano
+* Java 1.8.0_191
 
 
 ## Usage
