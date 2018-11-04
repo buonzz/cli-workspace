@@ -105,7 +105,10 @@ docker run -v $(pwd):/var/www buonzz/workspace bash  -c "mysql -u root -psecret 
 ```
 this will connect to the put_hostname_here mysql server, execute the sql query and dump the result to the current directory in the host.
 
-
+**run Java**
+```
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "java -version"
+```
 
 ### Accessing private repos
 
