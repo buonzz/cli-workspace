@@ -67,7 +67,7 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer update elastics
 in any folder on which you have package.json file, just execute the following:
 
 ```
-docker run -v $(pwd):/var/www buonzz/workspace bash -c "npm install"
+docker run -v $(pwd):/var/www buonzz/workspace bash  -c "npm install"
 ```
 
 **Fetch npm packages (using yarn)**
@@ -75,7 +75,7 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "npm install"
 in any folder on which you have package.json file, just execute the following:
 
 ```
-docker run -v $(pwd):/var/www buonzz/workspace bash -c "yarn"
+docker run -v $(pwd):/var/www --user=laradock buonzz/workspace bash --login -c "yarn install"
 ```
 
 ### Accessing private repos
