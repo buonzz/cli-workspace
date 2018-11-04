@@ -236,18 +236,6 @@ RUN JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 # append it in the global environment so it will be set even after restarts
 RUN echo 'JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")' | tee  /etc/profile.d/java8.sh
 
-# install ruby
-
-RUN apt-get update
-RUN apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
-RUN cd ~ && git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-RUN . ~/.bashrc
-RUN rbenv install 2.5.0
-RUN rbenv global 2.5.0
-
 
 #
 #--------------------------------------------------------------------------
