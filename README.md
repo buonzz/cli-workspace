@@ -38,9 +38,9 @@ docker run -it buonzz/workspace /bin/bash
 
 this will fetch the image, run the container, and log you inside the container -- now all the tools is available in front of you by just executing that simple command
 
-### You can use the container to without logging in inside.
+### You can use the container without logging in.
 
-the following will mount your current working directory ($(pwd)) to a path inside the container (/var/www), so that and then execute the commands passed in bash command. The effect is, the bash commands is being executed as if you are executing it in your host machine.
+the following commands  will mount your current working directory ($(pwd)) to a path inside the container (/var/www), then executes the commands passed in bash command. The effect is, the bash commands is being executed as if you are executing it in your host machine.
 
 **Fetch composer dependencies**
 
