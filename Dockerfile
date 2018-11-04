@@ -221,6 +221,22 @@ RUN apt-get update
 RUN apt install wget -y
 
 
+# install oracle java
+RUN sudo add-apt-repository -y ppa:webupd8team/java
+RUN sudo apt-get update
+RUN echo debconf shared/accepted-oracle-license-v1-1 select true | \
+  sudo debconf-set-selections
+RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | \
+  sudo debconf-set-selections
+RUN sudo apt-get -y install oracle-java8-installer
+
+#setup java_home environment var and save it in bash
+RUN JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
+
+# append it in the global environment so it will be set even after restarts
+RUN echo 'JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")' | sudo tee  /etc/profile.d/java8.sh
+
+
 #
 #--------------------------------------------------------------------------
 # Final Touch
