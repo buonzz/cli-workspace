@@ -28,6 +28,7 @@ Demo
 * vim
 * nano
 * Java 1.8.0_191
+* Ruby 2.5.1p57
 
 
 ## Usage
@@ -40,6 +41,10 @@ docker run -it buonzz/workspace /bin/bash
 this will fetch the image, run the container, and log you inside the container -- now all the tools is available in front of you by just executing that simple command
 
 NOTE: for Windows users, you might need to prepend "winpty" on each of these commands.
+
+```
+winpty docker run -it buonzz/workspace bash
+```
 
 ### You can use the container without logging in.
 
@@ -109,6 +114,12 @@ this will connect to the put_hostname_here mysql server, execute the sql query a
 **Java**
 ```
 docker run -v $(pwd):/var/www buonzz/workspace bash -c "java -version"
+```
+
+**Ruby**
+
+```
+docker run -it buonzz/workspace bash -c "ruby -v"
 ```
 
 ### Accessing private repos
