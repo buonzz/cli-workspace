@@ -236,7 +236,15 @@ RUN JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 # append it in the global environment so it will be set even after restarts
 RUN echo 'JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")' | tee  /etc/profile.d/java8.sh
 
-
+# install ruby
+RUN \
+  apt-get update && apt-get install -y --no-install-recommends --no-install-suggests curl bzip2 build-essential libssl-dev libreadline-dev zlib1g-dev && \
+  rm -rf /var/lib/apt/lists/* && \
+  curl -L https://github.com/sstephenson/ruby-build/archive/v20180329.tar.gz | tar -zxvf - -C /tmp/ && \
+  cd /tmp/ruby-build-* && ./install.sh && cd / && \
+  ruby-build -v 2.5.1 /usr/local && rm -rfv /tmp/ruby-build-* && \
+  gem install bundler --no-rdoc --no-ri
+  
 #
 #--------------------------------------------------------------------------
 # Final Touch
