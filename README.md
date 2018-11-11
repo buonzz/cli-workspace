@@ -50,6 +50,8 @@ winpty docker run -it buonzz/workspace bash
 
 the following commands  will mount your current working directory ($(pwd)) to a path inside the container (/var/www), then executes the commands passed in bash command. The effect is, the bash commands is being executed as if you are executing it in your host machine.
 
+NOTE: for Windows users using Git bash, you should replace the **$(pwd)** with  **/${PWD}**
+
 **Fetch composer dependencies**
 
 in any folder on which you have composer.json file, just execute the following:
@@ -64,7 +66,7 @@ this will run the workspace, and execute composer install command inside. The re
 
 
 ```
-docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer update elasticsearch/elasticsearch"
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer install elasticsearch/elasticsearch"
 ```
 or
 
@@ -119,8 +121,14 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "java -version"
 **Ruby**
 
 ```
-docker run -it buonzz/workspace bash -c "ruby -v"
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "ruby -v"
 ```
+
+**Jekyll**
+```
+docker run -v $(pwd):/var/www -p 4000:4000 buonzz/workspace bash -c "jekyll serve" 
+```
+
 
 ### Accessing private repos
 
