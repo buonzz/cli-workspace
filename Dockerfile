@@ -248,7 +248,8 @@ RUN \
 
 # install jekyll
 RUN gem install jekyll jekyll-paginate
-  
+EXPOSE 4000
+
 #
 #--------------------------------------------------------------------------
 # Final Touch
