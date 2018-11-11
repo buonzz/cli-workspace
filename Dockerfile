@@ -247,7 +247,7 @@ RUN \
 
 
 # install jekyll
-RUN gem install jekyll
+RUN gem install jekyll jekyll-paginate
   
 #
 #--------------------------------------------------------------------------

@@ -66,7 +66,7 @@ this will run the workspace, and execute composer install command inside. The re
 
 
 ```
-docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer update elasticsearch/elasticsearch"
+docker run -v $(pwd):/var/www buonzz/workspace bash -c "composer install elasticsearch/elasticsearch"
 ```
 or
 
@@ -122,6 +122,11 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "java -version"
 
 ```
 docker run -v $(pwd):/var/www buonzz/workspace bash -c "ruby -v"
+```
+
+**Jekyll**
+```
+docker run -v $(pwd):/var/www -p 4000:4000 buonzz/workspace bash -c "jekyll serve" 
 ```
 
 
