@@ -119,7 +119,7 @@ docker run -v $(pwd):/var/www buonzz/workspace bash -c "java -version"
 **Ruby**
 
 ```
-docker run -it buonzz/workspace bash -c "ruby -v"
+docker run buonzz/workspace bash -c "ruby -v"
 ```
 
 ### Accessing private repos

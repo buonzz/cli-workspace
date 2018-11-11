@@ -244,6 +244,10 @@ RUN \
   cd /tmp/ruby-build-* && ./install.sh && cd / && \
   ruby-build -v 2.5.1 /usr/local && rm -rfv /tmp/ruby-build-* && \
   gem install bundler --no-rdoc --no-ri
+
+
+# install jekyll
+RUN gem install jekyll
   
 #
 #--------------------------------------------------------------------------
