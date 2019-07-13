@@ -12,7 +12,6 @@ Demo
 
 ![alt text](https://raw.githubusercontent.com/buonzz/cli-workspace/master/demo.gif)
 
-
 ## Softwares Installed
 
 * Node 9.3.0 (npm v5.5.1)
@@ -31,7 +30,35 @@ Demo
 * Ruby 2.5.1p57
 
 
-## Usage
+## Requirements
+
+* Docker Engine 18 or higher
+
+### Installation
+
+For MacOS / Linux, append the following alias in your .bash_profile or .bashrc file
+```
+alias workspace="docker run -v $(pwd):/var/www buonzz/workspace bash -c"
+```
+ensure the new alias is loaded
+```
+source ~/.bashrc
+or 
+source ~/.bash_profile
+```
+You are done!
+
+Note that the first time you use the tool, it will download the container image, which might take time at first, but once downloaded it will be extremely fast to use
+
+### Usage
+
+Just type workspace and pass the command you want inside double quotes
+
+```
+workspace "composer -v"
+```
+
+### Advance Usage
 
 pull and run the container
 ```
